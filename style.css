@@ -44,7 +44,7 @@ body {
     cursor: pointer;
     user-select: none;
     transition: transform 0.1s ease-in-out;
-    width: 160px; /* Fixed width to maintain ASCII shape */
+    /* width: 160px; /* Fixed width to maintain ASCII shape */
     text-align: center;
     white-space: nowrap; /* Prevent text from wrapping */
 }
@@ -92,7 +92,7 @@ body {
     .ascii-button {
         font-size: 14px; /* Slightly smaller font size for narrow screens */
         width: 100%; /* Stack buttons to full width */
-        max-width: 160px; /* Prevent buttons from stretching too wide */
+        /* max-width: 160px; Prevent buttons from stretching too wide */
         box-sizing: border-box;
         margin-bottom: 20px;
     }
