@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Birthday Congratulations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <!-- ASCII Letter with animation applied only to the letter section -->
+        <div id="letter" class="ascii-animation">
+            <pre>
+┌─────────────────────┐
+│                     │
+│   🎉 BIRTHDAY 🎉    │
+│      LETTER        │
+│                     │
+└─────────────────────┘
+            </pre>
+            <div id="open-button" class="ascii-button">┌─────── Open ───────┐</div>
+        </div>
+        
+        <!-- Text area with justified text and ASCII-style buttons -->
+        <div id="text-area" style="display:none;">
+            <div id="start-button" class="ascii-button" style="display:none;">┌───── Start ─────┐</div>
+            <p id="typed-text" class="justified"></p>
+            <div id="skip-button" class="ascii-button" style="display:none;">┌────── Skip ──────┐</div>
+            <div id="continue-button" class="ascii-button" style="display:none;">┌─── Continue ───┐</div>
+            <div id="back-button" class="ascii-button" style="display:none;">┌──── Back ──────┐</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
