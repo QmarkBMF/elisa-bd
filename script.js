@@ -35,7 +35,7 @@ function typeCharacter() {
     } else {
         clearInterval(typingInterval);
         skipButton.style.display = "none";
-        continueButton.style.display = "inline";
+        continueButton.style.display = "inline-block";
     }
 }
 
@@ -43,11 +43,11 @@ function showPage(page) {
     currentPage = page;
     startTyping();
     if (page > 0) {
-        backButton.style.display = "inline";
+        backButton.style.display = "inline-block";
     } else {
         backButton.style.display = "none";
     }
-    startButton.style.display = "inline";
+    startButton.style.display = "inline-block";
 }
 
 openButton.addEventListener("click", () => {
@@ -60,7 +60,7 @@ skipButton.addEventListener("click", () => {
     clearInterval(typingInterval);
     typedTextElement.innerHTML = pages[currentPage];
     skipButton.style.display = "none";
-    continueButton.style.display = "inline";
+    continueButton.style.display = "inline-block";
 });
 
 continueButton.addEventListener("click", () => {

@@ -94,5 +94,6 @@ body {
         width: 100%; /* Stack buttons to full width */
         max-width: 160px; /* Prevent buttons from stretching too wide */
         box-sizing: border-box;
+        margin-bottom: 20px;
     }
 }
