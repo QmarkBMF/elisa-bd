@@ -1,7 +1,9 @@
 const pages = [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.",
-    "Cras vehicula, nisi eu consectetur venenatis, lorem nibh placerat elit, in laoreet magna ligula eu nunc.",
-    "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+    "Лиза, я хотел сначала написать от руки письмо, но, как ты видишь по моему почерку на открытке, с этим у меня были бы сложности, поэтому я сделал эту интерактивную открытку.  Press “CONTINUE” to continue, как говорится.",
+    "Перед самим поздравлением хотел бы от чистого сердца поблагодарить тебя за наше общение, твою поддержку и доверие, которые помогали и помогают мне во многом. Мы встретились в непростое время, я был далеко не в самой лучшей своей форме (да и сейчас, думаю, it’s not even my final form), и для меня было шоком, в хорошем смысле, что можно так быстро достичь такого уровня легкости и доверия во взаимодействии с человеком. Мне кажется, мы даже обсуждали через неделю после знакомства и удивлялись, что оно вот так вот оно как то получилось :)",
+    "Вот, и в день твоего рождения хочу пожелать тебе пожелать всего настолько хорошего, чтобы прям всё очень хорошо во всех отношениях. ты нереально крутая, супер вайбовая, офигенно красивая, very smart, very strong, very kind, very talented, ультраподдерживающая  и, конечно, топовая училка английского, заботливая пёсомать и вообще top girl.",
+    "в новом цикле твоей жизни желаю тебе успехов во всех сферах, лучших клиентов, прибыльных профессиональных движений, самых приятных и увлекающих увлечений, в которых ты, несомненно, покажешь топовый прогресс, результат и вот это вот всё. Конечно, не могу не пожелать здоровья физического и ментального, да и просто оставаться такой офигенной, потому что ты такая и есть.",
+    "P.S. Котячий прогноз на твой Новый год - восьмерка палочек. Жизнь набирает обороты, и именно в хорошем смысле. Появляется больше вещей вокруг, которые привлекают тебя, и увлечение ими, те усилия, которые ты приложено к ним, могут привести к быстрым и сильным переменам."
 ];
 
 let currentPage = 0;
@@ -45,7 +47,7 @@ function showPage(page) {
     } else {
         backButton.style.display = "none";
     }
-    startButton.style.display = "inline"; // Show the START button on text pages
+    startButton.style.display = "inline";
 }
 
 openButton.addEventListener("click", () => {
@@ -65,7 +67,7 @@ continueButton.addEventListener("click", () => {
     if (currentPage < pages.length - 1) {
         showPage(currentPage + 1);
     } else {
-        typedTextElement.innerHTML = "Thank you for reading!";
+        typedTextElement.innerHTML = "Спасибо за внимание! \n*играет Electric Youth - Real Hero*";
         continueButton.style.display = "none";
     }
 });
@@ -77,7 +79,6 @@ backButton.addEventListener("click", () => {
 });
 
 startButton.addEventListener("click", () => {
-    // Return to the start (letter) page
     textArea.style.display = "none";
     letterElement.style.display = "flex";
     currentPage = 0;

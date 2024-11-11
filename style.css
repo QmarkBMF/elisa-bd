@@ -33,17 +33,20 @@ body {
     100% { transform: scale(1); }
 }
 
-/* ASCII-styled button appearance */
+/* ASCII-styled button appearance with fixed width */
 .ascii-button {
     font-family: monospace;
     display: inline-block;
     padding: 10px;
-    margin: 10px;
+    margin: 5px;
     background-color: #f3f4f6;
     color: #333;
     cursor: pointer;
     user-select: none;
     transition: transform 0.1s ease-in-out;
+    width: 160px; /* Fixed width to maintain ASCII shape */
+    text-align: center;
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 
 .ascii-button:hover {
@@ -57,33 +60,39 @@ body {
 
 /* Justified and fixed-width text area */
 #typed-text.justified {
-    max-width: 400px; /* Fixed width for readability on mobile */
-    width: 90%; /* Ensures some flexibility on larger screens */
+    max-width: 400px;
+    width: 90%;
     margin: 20px auto;
     text-align: justify;
     white-space: pre-wrap;
 }
 
-/* Adding margin below START button */
-#start-button {
-    margin-bottom: 15px;
+/* Button container for proper button stacking */
+#text-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-/* Increase font size on smaller screens */
+/* Stack buttons vertically on smaller screens */
 @media (max-width: 600px) {
     body {
         font-size: 18px;
     }
 
     #letter {
-        font-size: 22px; /* Larger ASCII art for better visibility on mobile */
+        font-size: 22px;
     }
 
     #typed-text.justified {
-        font-size: 16px; /* Increase paragraph font size */
+        font-size: 16px;
     }
 
     .ascii-button {
-        font-size: 16px; /* Increase button font size */
+        font-size: 14px; /* Slightly smaller font size for narrow screens */
+        width: 100%; /* Stack buttons to full width */
+        max-width: 160px; /* Prevent buttons from stretching too wide */
+        box-sizing: border-box;
     }
 }
